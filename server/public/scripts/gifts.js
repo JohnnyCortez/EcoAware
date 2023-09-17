@@ -1,4 +1,22 @@
 const renderGifts = async () => {
+    fetch("http://localhost:5173/gifts")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    // Check if the data is not empty and is valid JSON
+    if (data && typeof data === "object") {
+      renderGifts(data);
+    } else {
+      console.error("Invalid JSON data received:", data);
+    }
+  })
+  .catch((error) => {
+    console.error("Error fetching or processing data:", error);
+  });
     const response = await fetch('/gifts')
     const data = await response.json()
     const mainContent = document.getElementById('main-content')

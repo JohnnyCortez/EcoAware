@@ -88,7 +88,7 @@ const giftData = [
         "description":"A perfect pop of color",
         "submittedBy":"Brandon",
         "submittedOn":"2023-01-10T14:48:00"
-    }
+    },
   ]
   
   export default giftData
