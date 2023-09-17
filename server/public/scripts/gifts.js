@@ -1,22 +1,4 @@
 const renderGifts = async () => {
-    fetch("http://localhost:5173/gifts")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return response.json();
-  })
-  .then((data) => {
-    // Check if the data is not empty and is valid JSON
-    if (data && typeof data === "object") {
-      renderGifts(data);
-    } else {
-      console.error("Invalid JSON data received:", data);
-    }
-  })
-  .catch((error) => {
-    console.error("Error fetching or processing data:", error);
-  });
     const response = await fetch('/gifts')
     const data = await response.json()
     const mainContent = document.getElementById('main-content')
@@ -55,4 +37,33 @@ const renderGifts = async () => {
     }
 }
 
+
 renderGifts()
+
+const renderGift = async () => {
+    console.log("hello0")
+    const requestedID = parseInt(window.location.href.split('/').pop())
+    const response = await fetch('/gifts')
+    const data = await response.json()
+    const giftContent = document.getElementById('gift-content')
+    console.log(giftContent)
+    let gift
+    gift = data.find(gift => gift.id === requestedID)
+    if (gift) {
+        console.log("hello")
+        document.getElementById('image').src = gift.image
+        document.getElementById('name').textContent = gift.name
+        document.getElementById('submittedBy').textContent = 'Submitted by: ' + gift.submittedBy
+        document.getElementById('pricePoint').textContent = 'Price: ' + gift.pricePoint
+        document.getElementById('audience').textContent = 'Great For: ' + gift.audience
+        document.getElementById('description').textContent = gift.description
+        document.title = `UnEarthed - ${gift.name}`
+    }
+    else {
+        const message = document.createElement('h2')
+        message.textContent = 'No Gifts Available 😞'
+        giftContent.appendChild(message)
+    }
+}
+
+renderGift()
