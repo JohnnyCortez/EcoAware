@@ -10,13 +10,13 @@ const headerLogo = document.createElement('img')
 headerLogo.src = '/logo.png'
 
 const headerTitle = document.createElement('h1')
-headerTitle.textContent = 'UnEarthed'
+headerTitle.textContent = 'Environmental Issues'
 
 headerLeft.appendChild(headerLogo)
 headerLeft.appendChild(headerTitle)
 
 const headerButton = document.createElement('Home')
-headerButton.textContent = 'Home'
+headerButton.textContent = 'All Issues'
     
 headerButton.addEventListener('click', (event) => {
   window.location = '/'
