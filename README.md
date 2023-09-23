@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='creatorverse.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='ecoAware.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with ScreenToGif
 
