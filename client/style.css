@@ -15,7 +15,7 @@
 .header-left {
   float: left;
   height: 100px;
-  width: 310px;
+  width: 400px;
 }
 
 .header-left img {
@@ -63,7 +63,7 @@ main {
 
 .card {
   width: 300px;
-  height: 400px;
+  height: 475px;
   background: transparent;
   border-style: solid;
   border-width: 3px;

@@ -10,7 +10,7 @@ const headerLogo = document.createElement('img')
 headerLogo.src = '/logo.png'
 
 const headerTitle = document.createElement('h1')
-headerTitle.textContent = 'Environmental Issues'
+headerTitle.textContent = 'EcoAware'
 
 headerLeft.appendChild(headerLogo)
 headerLeft.appendChild(headerTitle)
