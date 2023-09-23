@@ -12,7 +12,7 @@ const createTableQuery = `
         description TEXT NOT NULL,
         main_cause TEXT NOT NULL,
         main_solution TEXT NOT NULL,
-        image_url TEXT NOT NULL,
+        image_url TEXT NOT NULL
     )
 `
 
@@ -28,7 +28,7 @@ const seedGiftsTable = async () => {
     await createIssuesTable()
     environmentData.forEach((gift) => {
         const insertQuery = {
-            text: 'INSERT INTO gifts (name, description, main_cause, main_solution, image_url) VALUES ($1, $2, $3, $4, $5, $6)'
+            text: 'INSERT INTO gifts (name, description, main_cause, main_solution, image_url) VALUES ($1, $2, $3, $4, $5)'
           }
           const values = [
             gift.name,
