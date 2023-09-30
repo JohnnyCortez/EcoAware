@@ -7,11 +7,17 @@ Learn about different environmental issues!
 
 The following **required** functionality is completed:
 
+part 1
 -The web app uses only HTML, CSS, and JavaScript without a frontend framework
 -The web app displays a title
 -The web app displays at least five list items, each with at least three attributes (such as title, text, and image URL)
 -The user can click on each item in the list to see a detailed view of it, including all database fields
 -The web app serves an appropriate 404 page when no matching route is defined
+
+part 2
+-The web app uses only HTML, CSS, and JavaScript without a frontend framework.
+-The web app is connected to a PostgreSQL database.
+-The PostgreSQL database includes a table that matches the data displayed in the web app.
 
 The following **optional** features are implemented:
 
