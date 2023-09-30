@@ -3,7 +3,7 @@ const renderGifts = async () => {
   const data = await response.json();
 
   const mainContent = document.getElementById('main-content');
-
+  console.log(data)
   if (data) {
     data.map(gift => {
       const card = document.createElement('div');
