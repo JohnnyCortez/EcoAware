@@ -24,13 +24,6 @@ Here's a walkthrough of implemented features:
 <img src='ecoAware.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
-
-
-
-<img src='PostgreSQL table.png' title='data table for home page' width='' alt='Video Walkthrough' />
-
-
-
 GIF created with ScreenToGif
 
 ## Notes
