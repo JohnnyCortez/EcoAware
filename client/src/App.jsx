@@ -4,6 +4,8 @@ import { useRoutes } from 'react-router-dom'
 import Gifts from './pages/Gifts'
 import GiftDetails from './pages/GiftDetails'
 import PageNotFound from './pages/PageNotFound'
+import CreateGift from './pages/CreateGift'
+import EditGift from './pages/EditGift'
 import { Link } from 'react-router-dom'
 
 const App = () => {
@@ -35,6 +37,14 @@ const App = () => {
     {
       path:"/*",
       element: <PageNotFound />
+    },
+    {
+      path:"/new",
+      element: <CreateGift />
+    },
+    {
+      path:"/edit/:id",
+      element: <EditGift data={gifts}/>
     }
   ]);
 
@@ -52,6 +62,7 @@ const App = () => {
           </div>
           <div className="header-right">
             <Link to="/"><button className="homeBtn">Home</button></Link>
+            <Link to="/new"><button className='addBtn'>+ Add Gift</button></Link>
           </div>
         </div>
       </header>
